@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=develop ts-node ."
+    "dev": "NODE_ENV=development ts-node .",
+    "prod": "NODE_ENV=production ts-node .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,12 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "@types/node": "^20.14.10"
+    "@eslint/js": "^9.6.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.14.10",
+    "eslint": "^9.6.0",
+    "globals": "^15.8.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.16.0"
   }
 }

@@ -1,8 +1,8 @@
-import { SlashCommandBuilder } from "discord.js";
+import { Interaction, SlashCommandBuilder } from "discord.js";
 
 type Command = {
-    data: SlashCommandBuilder
-    execute?: (interaction: any) => Promise<void>
-}
+  data: SlashCommandBuilder;
+  execute: (interaction: Interaction) => Promise<void>;
+};
 
 export default Command;
