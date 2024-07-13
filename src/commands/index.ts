@@ -1,1 +1,1 @@
-import "./src/commands/ping";
+import "./utils/ping";
