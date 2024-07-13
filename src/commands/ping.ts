@@ -1,11 +1,13 @@
 import { ChatInputCommandInteraction, SlashCommandBuilder } from "discord.js";
-import ClientUtils from "../utils/clientUtils";
+import CommandsUtils from "../utils/commands/commandsUtils";
 
-ClientUtils.addCommands({
+CommandsUtils.add({
   data: new SlashCommandBuilder()
     .setName("ping")
     .setDescription("Replies with Pong!"),
   execute: async (interaction) => {
-    await (interaction as ChatInputCommandInteraction).reply("Pong!");
+    await(interaction as ChatInputCommandInteraction).reply(
+      `Pong! Latence: \`${Date.now() - interaction.createdTimestamp}ms\``
+    );
   },
 });

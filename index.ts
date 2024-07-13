@@ -1,9 +1,10 @@
-import ClientUtils from "./src/utils/clientUtils";
-import "./src/commands/ping";
+import "./src/commands/index";
+import ClientUtils from "./src/utils/client/clientUtils";
+import CommandsUtils from "./src/utils/commands/commandsUtils";
 
 (() => {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
-  ClientUtils.runClient();
-  ClientUtils.registerCommands();
+  ClientUtils.run();
+  CommandsUtils.register();
 })();
